@@ -305,6 +305,7 @@ RestClient::Connection::SetProxy(const std::string &uriProxy) {
  * @param ret Reference to the Response struct that should be filled
  *
  * @return 0 on success and 1 on error
+ * add lib curl certificate in below method
  */
 RestClient::Response
 RestClient::Connection::performCurlRequest(const std::string &uri) {

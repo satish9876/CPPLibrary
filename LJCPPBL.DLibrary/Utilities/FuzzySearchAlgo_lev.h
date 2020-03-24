@@ -15,7 +15,7 @@
 #include "StringUtil.h"
 #include <numeric> 
 
-
+// calculate string rank with levenshtein algo
 long levenshtein_distanceV1(const std::string s1, const std::string s2)
 {
     const std::size_t len1 = s1.size(), len2 = s2.size();
