@@ -135,48 +135,6 @@ const char *concatenateMyStringWithCppString(const char *myString) {
 }
 
 
-/*const std::vector<std::string> performFuzzySearch(const std::vector<std::string> dictionary,
-                                                  const std::string pattern) {
-
-    std::vector<std::pair<int, std::string const *>> matches;
-    std::vector<std::string> returnData, returnDataPattern;
-
-    for (auto &&entry : dictionary) {
-
-        long PhraseScore = levenshteinDistanceByPhrase(pattern, entry);
-        long WordScore = levenshteinDistanceByWords(pattern, entry);
-        long score = PhraseScore - 0.8 * std::abs((long) (pattern.length() - entry.length()));
-
-        std::cout << "Pattern and Dictionary item = " << pattern + " " + entry << std::endl;
-        std::cout << "PhraseScore = " << PhraseScore << std::endl;
-        std::cout << "WordScore = " << WordScore << std::endl;
-        std::cout << "score = " << score << std::endl;
-
-        // std::cout << "target Length = " << pattern.length()<< std::endl;
-        // std::cout << "target Length = " << entry.length()<< std::endl;
-        matches.emplace_back(score, &entry);
-    }
-    std::sort(matches.begin(), matches.end(), [](auto &&a, auto &&b) { return a.first > b.first; });
-
-
-    for (auto result : matches) {
-        if (result.first) {
-            std::cout << result.first << " - " << result.second << std::endl;
-            std::string TempR = std::to_string(result.first) + " - " + *result.second;
-            returnData.push_back(TempR);
-        }
-    }
-    std::sort(std::begin(returnData), std::end(returnData), CustomAlphaCmp(pattern));
-
-    for (int i = 1; i <= pattern.size(); i++) {
-        returnDataPattern.push_back(pattern.substr(0, i));
-    }
-    returnData = getMatchingSubstrings(returnDataPattern, returnData);
-
-
-    return returnData;
-}*/
-
 
 /* fuzzy search with vector*/
 const int SearchString(string text, string pattern, int k) {
